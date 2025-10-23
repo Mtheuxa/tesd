@@ -1,0 +1,691 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   ESTILOS GERAIS E MOBILE (BASE)
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#ano {
+  margin-left: 15px;
+  font-weight: bolder;
+  padding-top: 5px;
+}
+
+#container {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #fce4ec;
+}
+
+.itens {
+  flex: auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#data {
+  border: 1px solid rgb(207, 11, 47);
+  background-image: linear-gradient(to left,#E952DE, #E233B4);
+  color: white;
+  border-radius: 30px;
+}
+
+#none, #none2 {
+  background-color: #bbbbbb7e;
+  border-radius: 30px;
+}
+
+#confetes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confete {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: cair 3s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes cair {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+}
+
+#titulo-principal {
+  color: #E952DE;
+  text-align: center;
+  font-size: 2em;
+  margin: 30px 30px 5px 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.169);
+}
+
+#imagem-bolo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bolo_grande {
+  width: 250px;
+}
+
+#parabens {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: -1px 0px 20px #00000066;
+}
+
+#frase-parabens {
+  font-weight: bold;
+}
+
+#parabens p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#principal {
+  background-color: black;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  color: white;
+}
+
+#insta {
+  padding: 10px 5px 10px 0;
+  margin-top: 30px;
+}
+
+#perfil-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+#perfil {
+  width: 50px;
+  border-radius: 200px;
+}
+
+#verificado {
+  width: 18px;
+  margin-left: 3px;
+}
+
+.carrossel {
+  position: relative;
+  max-width: 600px;
+  margin: 15px auto 3px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  width: 470px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active {
+  background-color: #c2185b;
+}
+
+#curtida {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#likeIcon {
+  width: 30px;
+  margin-left: 18px;
+}
+
+#comentario {
+  margin: 20px 30px 0 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#nome-perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: small;
+}
+
+#perfil-lucas {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#meu-comentario {
+  margin-left: 45px;
+  font-size: 0.95rem;
+}
+
+.curtir-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.85rem;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.curtir-btn:hover {
+  color: #ff007f;
+}
+
+.contador {
+  font-weight: normal;
+  color: #555;
+  font-size: 0.95rem !important;
+}
+
+/* --- ESTILOS DO CARROSSEL LUIZA (SLIDE INFINITO) --- */
+#carrosel-juntos {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+#p-carrosel-juntos {
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  font-size: 1.2em;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+
+.carrosselLuiza-container {
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.carrosselLuiza {
+    display: flex;
+}
+
+.carrosselLuiza img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.controlesLuiza {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btnLuiza {
+    background-color: #E952DE;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btnLuiza:hover {
+    background-color: #E233B4;
+}
+/* --- FIM DOS ESTILOS DO CARROSSEL LUIZA --- */
+
+#spotify {
+  padding: 30px;
+  border: 1px solid #00d95e42;
+  border-radius: 10px;
+}
+
+#frase-spotify {
+  background-color: #00D95F;
+  color: black;
+  padding: 10px 0 10px 30px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.h3 {
+  margin: 30px;
+  text-align: center;
+}
+
+#ico-spotify {
+  width: 100px;
+  vertical-align: middle;
+}
+
+.audio {
+  margin: 2px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1.5s ease;
+}
+
+.audio.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.espaco {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  background-color: black;
+}
+
+.sol, .orbita-terra, .terra, .orbita-lua, .lua {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.sol {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFD700, #fff700);
+  box-shadow: 0 0 30px #FFD700;
+}
+
+.orbita-terra {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed #aaaaaa6c;
+  animation: orbita-terra 10s linear infinite;
+}
+
+.terra {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #2051f2, #1c60e9);
+  box-shadow: 0 0 10px #00f;
+  top: 50%;
+  left: 0;
+}
+
+.orbita-lua {
+  width: 60px;
+  height: 60px;
+  animation: orbita-lua 2s linear infinite;
+}
+
+.lua {
+  width: 8px;
+  height: 8px;
+  background: #eee;
+  box-shadow: 0 0 5px #fff;
+  top: 50%;
+  left: 0;
+}
+
+@keyframes orbita-terra {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbita-lua {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+#temporizador {
+  padding-bottom: 100px;
+  background-color: black;
+}
+
+#temporizador h1 {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-align: center;
+  gap: 10px;
+}
+
+#temporizador .tempo {
+  color: #bb86fc;
+  padding: 15px 5px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tempo span {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  color: #8b949e;
+}
+
+/* ==========================================================================
+   ESTILOS PARA DESKTOP (TELAS MAIORES QUE 500PX)
+   ========================================================================== */
+
+@media screen and (min-width: 500px) {
+    #ano {
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    #container {
+        padding: 15px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .itens {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .confete {
+        width: 15px;
+        height: 15px;
+        animation-name: cair-desktop;
+    }
+
+    @keyframes cair-desktop {
+        0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
+    }
+
+    #titulo-principal {
+        font-size: 3.5em;
+        margin: 50px auto 10px auto;
+        max-width: 800px;
+    }
+
+    #bolo_grande {
+        width: 350px;
+    }
+
+    #parabens {
+        padding: 30px;
+        max-width: 700px;
+        margin: 40px auto;
+    }
+
+    #parabens p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    main#principal {
+        padding: 50px 0;
+    }
+
+    #insta {
+        padding: 20px;
+        margin: 50px auto;
+        max-width: 600px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    #perfil-container {
+        gap: 15px;
+        margin-left: 30px;
+    }
+
+    #perfil {
+        width: 60px;
+    }
+
+    .carrossel {
+        max-width: 550px;
+        margin: 20px auto 5px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .slides {
+        height: 550px;
+    }
+
+    .dots {
+        margin-bottom: 10px;
+    }
+
+    #curtida {
+        gap: 10px;
+        margin: 15px 0 0 30px;
+    }
+
+    #likeIcon {
+        width: 35px;
+        margin-left: 20px;
+    }
+
+    #quant_like {
+        font-size: 1.1em;
+    }
+
+    #comentario {
+        background-color: #1a1a1a;
+        margin: 25px 30px 0 30px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    #nome-perfil {
+        gap: 12px;
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+
+    #perfil-lucas {
+        width: 40px;
+        height: 40px;
+    }
+
+    #meu-comentario {
+        margin-left: 55px;
+        font-size: 1em;
+    }
+
+    .curtir-btn {
+        font-size: 0.95rem;
+        right: 15px;
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .contador {
+        font-size: 1rem !important;
+    }
+
+    hr {
+        margin-top: 100px;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ESTILOS DESKTOP PARA O CARROSSEL LUIZA */
+    #carrosel-juntos {
+      margin-top: 120px;
+      margin-bottom: 80px;
+    }
+
+    #p-carrosel-juntos {
+        font-size: 1.4em;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto 60px auto;
+    }
+
+    .carrosselLuiza-container {
+        max-width: 1000px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .carrosselLuiza img {
+        height: 400px;
+    }
+    
+    .controlesLuiza {
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .btnLuiza {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    /* FIM DOS ESTILOS DESKTOP PARA O CARROSSEL LUIZA */
+
+    #spotify {
+        background-color: #1a1a1a;
+        padding: 40px;
+        max-width: 800px;
+        margin: 80px auto;
+    }
+
+    #frase-spotify {
+        padding: 15px 40px 15px 30px;
+        font-size: 1.3em;
+        text-shadow: none;
+    }
+
+    .h3 {
+        margin: 40px 0 20px 0;
+        font-size: 1.6em;
+    }
+
+    #ico-spotify {
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    .audio {
+        width: 90%;
+        max-width: 600px;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .espaco {
+        height: 500px;
+    }
+
+    .sol {
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 50px #FFD700;
+    }
+
+    .orbita-terra {
+        width: 400px;
+        height: 400px;
+        animation-duration: 15s;
+    }
+
+    .terra {
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 20px #00f;
+    }
+
+    .orbita-lua {
+        width: 80px;
+        height: 80px;
+        animation-duration: 3s;
+    }
+
+    .lua {
+        width: 12px;
+        height: 12px;
+        box-shadow: 0 0 8px #fff;
+    }
+
+    #temporizador {
+        padding-top: 50px;
+        padding-bottom: 120px;
+    }
+
+    #temporizador h1 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    #temporizador h1 strong {
+        font-size: 1.8em;
+    }
+
+    .contador {
+        font-size: 1.8rem;
+        gap: 30px;
+    }
+
+    .tempo {
+        color: white;
+        padding: 25px;
+        background-color: #333;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        min-width: 120px;
+    }
+
+    .tempo span {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        color: #b0b8c0;
+    }
+}

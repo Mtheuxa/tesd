@@ -1,0 +1,282 @@
+ <!--
+ 
+ ⚠️ ATENÇÃO IMPORTANTE: Redimensione suas Fotos! ⚠️
+ *
+ * Para garantir que o site funcione de forma RÁPIDA e EFICIENTE,
+ * é FUNDAMENTAL que você utilize um aplicativo ou ferramenta para
+ * REDUZIR o tamanho e a qualidade das fotos em pixels antes de fazer o upload.
+ *
+ * Fotos muito grandes, com alta resolução, deixam o site EXTREMAMENTE PESADO,
+ * tornando-o LENTO, difícil de carregar e quase IMPOSSÍVEL de usar.
+ *
+ * Por favor, NÃO PULE esta etapa!
+ * Redimensionar suas imagens agora fará uma grande diferença na experiência de todos.
+ 
+
+ >>>>> SE VOCÊ LEU O AVISO APAQUE TUDO  ⚠️
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Configurações básicas do documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/style/desktop.css">
+  <title>Feliz Aniversário</title>
+</head>
+<body>
+  <!-- Cabeçalho com calendário -->
+  <header>
+     <!-- Efeito de confetes -->
+    <div id="confetes-container"></div>
+    <!-- Exibição do mês/ano -->
+    <p id="ano">Outubro / 2025</p>
+
+    <!-- Container do calendário - primeira linha -->
+    <div id="container">
+      <!-- Dias do mês (os dois primeiros estão ocultos pois são do mês anterior) -->
+      <p id="none" class="itens">25</p>
+      <p id="none2" class="itens">26</p>
+      <p id="data" class="itens">27</p> <!-- Dia do aniversário destacado -->
+      <p class="itens">28</p>
+      <p class="itens">29</p>
+      <p class="itens">30</p>
+    </div>
+    <!-- Container do calendário - segunda linha -->
+    <div id="container">
+      <p class="itens">31</p>
+      <p class="itens">01</p>
+      <p class="itens">02</p>
+      <p class="itens">03</p>
+      <p class="itens">04</p>
+      <p class="itens">05</p>
+    </div>
+  
+
+  <!-- Título principal -->
+  <h1 id="titulo-principal">Feliz Aniversario Meu <br> Amooooor !!</h1>
+
+  <!-- Imagem do bolo de aniversário -->
+  <div id="imagem-bolo">
+    <img id="bolo_grande" src="assets/img/icon/17-anos.png" alt="Bolo de Aniversário">
+  </div>
+  </section>
+
+
+  <!-- Mensagem de parabéns -->
+  <div id="parabens">
+    <p id="frase-parabens"><stro>Parabéns Meu amor!</stro> <br> Sou muito grato por ter você na minha vida, iluminando meus dias com seu jeito doce.
+      Que esse novo ciclo venha cheio de sonhos realizados, momentos felizes e muito amor. Você merece tudo de melhor que o mundo pode oferecer.
+      Estarei ao seu lado em cada passo, celebrando suas vitórias e segurando sua mão nos desafios. Te amo mais a cada dia, e desejo que sua vida seja repleta de paz, saúde e felicidade. Parabéns pelo seu dia princesa! 💖✨
+      <br> Quais serão os desafios que você vai desbloquear daqui pra frente gatinha?</p>
+  </div>
+</header>
+  <!-- Conteúdo principal do site -->
+  <main id="principal">
+    <!-- Seção que simula um post do Instagram -->
+    <section id="insta">
+      <!-- Perfil do Instagram -->
+      <div id="perfil-container">
+        <img id="perfil" src="assets/img/perfil/Perfil_thais.jpg" alt="perfil">
+        <p>Thais Santos<img id="verificado" src="assets/img/icon/verificado.png" alt="Verificado"> <br> <i style="font-size: small;">Itanhandu</i></p>
+      </div>
+      
+      <!-- Carrossel de imagens -->
+      <div class="carrossel">
+        <img class="slides" src="assets/img/carrossel-1/Perfil_thais.jpg" alt="Foto 1">
+        <img class="slides" src="assets/img/carrossel-1/Post_carna.jpg" alt="Foto 2">
+        <img class="slides" src="assets/img/carrossel-1/Post_casa.jpg" alt="Foto 3">
+        <img class="slides" src="assets/img/carrossel-1/Post_casa2.jpg" alt="Foto 6">
+        <img class="slides" src="assets/img/carrossel-1/Post_show.jpg" alt="Foto 4">
+        <img class="slides" src="assets/img/carrossel-1/Post_casa3.jpg" alt="Foto 5">
+      </div>
+      
+      <!-- Indicadores do carrossel -->
+      <div class="dots">
+        <span class="dot active" onclick="moveToSlide(0)"></span>
+        <span class="dot" onclick="moveToSlide(1)"></span>
+        <span class="dot" onclick="moveToSlide(2)"></span>
+        <span class="dot" onclick="moveToSlide(3)"></span>
+        <span class="dot" onclick="moveToSlide(4)"></span>
+        <span class="dot" onclick="moveToSlide(5)"></span>
+      </div>
+      
+      <!-- Seção de curtidas -->
+      <div id="curtida">
+        <img id="likeIcon" src="assets/img/icon/coracao.png" alt="Curtir">
+        <p id="quant_like">1.943</p>
+      </div>
+
+      <!-- Comentários no post -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">De longe a mais linda que já entrou na minha vida ❤️❤️❤️❤️</p>
+        <button class="curtir-btn">curtir <span class="contador">1347</span></button>
+      </div>
+
+      <!-- Mais comentários (estrutura repetida) -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">
+          Linda é pouco, você é maravilhosa, perfeita e minha! 🥰🥰
+        </p>
+        <button class="curtir-btn">
+          curtir
+          <span class="contador">789</span>
+        </button>
+      </div>
+
+      <!-- Comentário 3 -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">
+          Deus caprichou demais quando te fez. 👸
+        </p>
+        <button class="curtir-btn">
+          curtir
+          <span class="contador">1105</span>
+        </button>
+      </div>
+
+      <!-- Comentário 4 -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">
+          A mulher mais incrível que já conheci, sorte a minha te ter. 😍😍😍😍
+        </p>
+        <button class="curtir-btn">
+          curtir
+          <span class="contador">426</span>
+        </button>
+      </div>
+
+      <!-- Comentário 5 -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">
+          Cada dia mais apaixonado por você, meu amor! 🔥🔥🔥🔥🔥
+        </p>
+        <button class="curtir-btn">
+          curtir
+          <span class="contador">1398</span>
+        </button>
+      </div>
+
+      <!-- Comentário 6 -->
+      <div id="comentario">
+        <p id="nome-perfil">
+          <img id="perfil-lucas" src="assets/img/perfil/Perfil_mt.jpg" alt="">
+          <i>Matheus Araujo</i>
+        </p>
+        <p id="meu-comentario">
+          Se beleza fosse crime, você estaria presa pra sempre, meu amor! 😂😂 ❤
+        </p>
+        <button class="curtir-btn">
+          curtir
+          <span class="contador">632</span>
+        </button>
+      </div>
+
+      <hr style="margin-top: 80px;">
+    </section>
+
+    <!-- Seção de fotos juntos -->
+    <section id="carrosel-juntos">
+      <p id="p-carrosel-juntos">Se eu pudesse congelar o tempo, seria em todos os momentos em que a gente esteve juntos, porque são nesses instantes que eu me sinto completo, feliz e com a certeza de que encontrei o amor da minha vida. 🌍 </p>
+      
+      <!-- Carrossel horizontal de fotos -->
+      <div class="carrosselLuiza-container">
+        <div class="carrosselLuiza" id="carrosselLuiza">
+          <img src="assets/img/carrossel-2/Perfil_apt.jpg" alt="fot-01">
+          <img src="assets/img/carrossel-2/Perfil_carnaval.jpg" alt="fot-02">
+          <img src="assets/img/carrossel-2/Perfil_praia.jpg" alt="fot-03">
+          <img src="assets/img/carrossel-2/Perfil_bgs.jpg" alt="fot-04">
+          <img src="assets/img/carrossel-2/Perfil_anonovo.jpg" alt="fot-05">
+          <img src="assets/img/carrossel-2/Perfil_prediocarna.jpg" alt="fot-06">
+          <img src="assets/img/carrossel-2/Perfil_show.jpg" alt="fot-07">
+          <img src="assets/img/carrossel-2/Perfil_prainha.jpg" alt="fot-08">
+          <img src="assets/img/carrossel-2/Perfil_insta.jpg" alt="fot-09">
+          <img src="assets/img/carrossel-2/Perfil_minas.jpg" alt="fot-10">
+          <img src="assets/img/carrossel-2/Perfil_julianos.jpg" alt="fot-11">
+          <img src="assets/img/carrossel-2/Perfil_xv.jpg" alt="fot-16">
+          <img src="assets/img/carrossel-2/Perfil_anopraia.jpg" alt="fot-12">
+          <img src="assets/img/carrossel-2/Perfil_prainha2.jpg" alt="fot-13">
+          <img src="assets/img/carrossel-2/Perfil_ibira.jpg" alt="fot-14">
+          <img src="assets/img/carrossel-2/Perfil_bgs2.jpg" alt="fot-15">
+          <img src="assets/img/carrossel-2/Perfil_dancaxv.jpg" alt="fot-17">
+        </div>
+      </div>
+      
+      <!-- Controles do carrossel
+      <div class="controlesLuiza">
+        <button class="btnLuiza" onclick="voltarLuiza()">← Voltar</button>
+        <button class="btnLuiza" onclick="avancarLuiza()">Avançar →</button>
+      </div> -->
+    </section>
+
+    <!-- Seção de músicas do Spotify -->
+    <section id="spotify">
+      <h3 class="h3" id="frase-spotify">Músicas que marcaram quando você entrou na minha vida. </h3>
+      <h3 class="h3"><i><img id="ico-spotify" src="assets/img/icon/spotify.png" alt="">Previas do Spotify</i> </h3>
+
+      <!-- Embed de músicas do Spotify -->
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7nSataGo54Le0IfcFQCFLN?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4Bt1Yv5EcpMX6cwzeXyoNY?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/34A67HYwwe91CyLaNVQ6JG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0iCOIAN5PaXnATuKkzTVNx?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5EVv8M3vhByFLLqT1dkdGd?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7w36CnYumoRl1ryZOWsJnk?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/01Z18LIRXx7QHzWp2QpDaE?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7eYEQnY6Lzh3Y8jSOt3xEF?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2ux3Sb90r5aA74nLMls1u0?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+  </main>  
+    <footer>
+      <!-- Elemento decorativo do sistema solar -->
+      <div class="espaco">
+        <div class="sol"></div>
+        <div class="orbita-terra">
+          <div class="terra">
+            <div class="orbita-lua">
+              <div class="lua"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Seção de contagem regressiva -->
+      <section id="temporizador">
+        <h1>Contagem Regressiva <br> para o nível <br> <strong style="color: gold; font-size: larger;">25</strong></h1>
+        <div class="contador">
+          <div class="tempo" id="dias">0<span>Dias</span></div>
+          <div class="tempo" id="horas">0<span>Horas</span></div>
+          <div class="tempo" id="minutos">0<span>Minutos</span></div>
+          <div class="tempo" id="segundos">0<span>Segundos</span></div>
+          <script src="assets/script/script.js"></script>
+        </div>
+      </section>
+      
+        
+        <!-- Link para o arquivo JavaScript -->
+        <script src="/assets/script/script.js"></script>
+    </footer>
+
+</body>
+</html>
