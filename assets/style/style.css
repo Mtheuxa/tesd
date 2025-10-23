@@ -1,25 +1,25 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   ESTILOS GERAIS E MOBILE (BASE)
-   ========================================================================== */
-
+/* Reset básico - remove margens e paddings padrão e define box-sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Estilos gerais do corpo do documento */
 body {
   font-family: Arial, sans-serif;
 }
 
+/* Estilo para exibição do ano/mês no topo */
 #ano {
   margin-left: 15px;
   font-weight: bolder;
   padding-top: 5px;
 }
 
+/* Container dos dias do calendário */
 #container {
   display: flex;
   padding: 10px;
@@ -27,6 +27,7 @@ body {
   border-bottom: 1px solid #fce4ec;
 }
 
+/* Estilo padrão dos dias do calendário */
 .itens {
   flex: auto;
   text-align: center;
@@ -34,6 +35,7 @@ body {
   padding: 8px;
 }
 
+/* Estilo do dia de aniversário destacado */
 #data {
   border: 1px solid rgb(207, 11, 47);
   background-image: linear-gradient(to left,#E952DE, #E233B4);
@@ -41,11 +43,20 @@ body {
   border-radius: 30px;
 }
 
+/* Estilo dos dias inativos (mês anterior) */
 #none, #none2 {
   background-color: #bbbbbb7e;
   border-radius: 30px;
 }
 
+/* Container principal da mensagem de aniversário */
+#feliz-aniversario-meu-amor {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Container dos efeitos de confete */
 #confetes-container {
   position: absolute;
   top: 0;
@@ -56,67 +67,93 @@ body {
   z-index: 10;
 }
 
+/* Estilo individual de cada confete */
 .confete {
   position: absolute;
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  background-color: #f39c12;
   animation: cair 3s linear infinite;
   opacity: 0.8;
 }
 
+/* Animação de queda dos confetes */
 @keyframes cair {
-  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(600px) rotate(360deg);
+    opacity: 0;
+  }
 }
 
+/* Título principal da página */
 #titulo-principal {
   color: #E952DE;
   text-align: center;
   font-size: 2em;
-  margin: 30px 30px 5px 30px;
+  margin: 30px;
+  margin-bottom: 5px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.169);
 }
 
+/* Container da imagem do bolo */
 #imagem-bolo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Estilo da imagem do bolo */
 #bolo_grande {
   width: 250px;
 }
 
+/* Container da mensagem de parabéns */
 #parabens {
   background-color: antiquewhite;
   text-align: center;
   padding: 20px;
   border-radius: 30px;
   box-shadow: -1px 0px 20px #00000066;
+  padding-top: 20px;
 }
 
+/* Destaque do texto de parabéns */
 #frase-parabens {
   font-weight: bold;
 }
 
+/* Estilo do texto da mensagem */
 #parabens p {
   font-size: 18px;
   line-height: 1.5;
 }
 
+/* Área principal de conteúdo */
 #principal {
   background-color: black;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
-  color: white;
+  color: white; /* Adicionado para garantir a legibilidade do texto */
 }
 
+/* Estilo da seção que simula o Instagram */
 #insta {
-  padding: 10px 5px 10px 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 5px;
   margin-top: 30px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
 }
 
+/* Container do perfil no estilo Instagram */
 #perfil-container {
   display: flex;
   align-items: center;
@@ -125,37 +162,45 @@ body {
   margin-left: 20px;
 }
 
+/* Imagem do perfil */
 #perfil {
   width: 50px;
   border-radius: 200px;
 }
 
+/* Ícone de verificado */
 #verificado {
   width: 18px;
   margin-left: 3px;
 }
 
+/* Container do carrossel de fotos */
 .carrossel {
   position: relative;
   max-width: 600px;
-  margin: 15px auto 3px auto;
+  margin: 30px auto 10px auto;
+  margin-top: 15px;
+  margin-bottom: 3px;
   overflow: hidden;
   border-radius: 10px;
 }
 
+/* Imagens dentro do carrossel */
 .slides {
-  width: 470px;
-  height: 500px;
+  width: 100%; /* Alterado para responsividade */
+  height: auto; /* Alterado para manter proporção */
   object-fit: cover;
   display: block;
   margin: 0 auto;
 }
 
+/* Container dos pontos indicadores do carrossel */
 .dots {
   text-align: center;
   margin-bottom: 0px;
 }
 
+/* Estilo dos pontos indicadores */
 .dot {
   cursor: pointer;
   height: 7px;
@@ -167,27 +212,38 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* Ponto indicador ativo */
 .active {
   background-color: #c2185b;
 }
 
+/* Área de curtidas */
 #curtida {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: 20px; /* Adicionado para alinhar */
 }
 
+/* Ícone de curtida */
 #likeIcon {
   width: 30px;
   margin-left: 18px;
 }
 
+/* Estilo dos comentários */
 #comentario {
-  margin: 20px 30px 0 30px;
+  background-color: #1a1a1a; /* Alterado para contraste */
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  padding: 15px; /* Adicionado padding */
   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
 }
 
+/* Nome do perfil nos comentários */
 #nome-perfil {
   display: flex;
   align-items: center;
@@ -196,6 +252,7 @@ body {
   font-size: small;
 }
 
+/* Imagem do perfil nos comentários */
 #perfil-lucas {
   width: 35px;
   height: 35px;
@@ -203,11 +260,13 @@ body {
   object-fit: cover;
 }
 
+/* Texto do comentário */
 #meu-comentario {
   margin-left: 45px;
   font-size: 0.95rem;
 }
 
+/* Botão de curtir nos comentários */
 .curtir-btn {
   background: none;
   border: none;
@@ -216,28 +275,32 @@ body {
   font-size: 0.85rem;
   position: absolute;
   right: 10px;
+  bottom: 10px; /* Adicionado para melhor posicionamento */
   display: flex;
   align-items: center;
   gap: 5px;
   transition: color 0.3s ease;
 }
 
+/* Efeito hover no botão de curtir */
 .curtir-btn:hover {
   color: #ff007f;
 }
 
+/* Contador de curtidas */
 .contador {
   font-weight: normal;
-  color: #555;
+  color: #aaa; /* Alterado para melhor contraste */
   font-size: 0.95rem !important;
 }
 
-/* --- ESTILOS DO CARROSSEL LUIZA (SLIDE INFINITO) --- */
+/* Seção do segundo carrossel (fotos juntos) */
 #carrosel-juntos {
   margin-top: 100px;
   margin-bottom: 50px;
 }
 
+/* Texto acima do segundo carrossel */
 #p-carrosel-juntos {
   text-align: center;
   font-weight: bold;
@@ -247,71 +310,103 @@ body {
   margin-bottom: 50px;
 }
 
+/* Container do segundo carrossel */
 .carrosselLuiza-container {
-    overflow: hidden;
-    width: 95%;
-    margin: auto;
-    border-radius: 12px;
+  overflow: hidden;
+  width: 99vw;
+  max-width: 900px;
+  margin: auto;
+  border: 3px solid #000000;
+  border-radius: 12px;
 }
 
+/* Estilo do segundo carrossel */
 .carrosselLuiza {
-    display: flex;
+  display: flex;
+  width: auto;
+  transition: transform 1.5s ease-in-out;
+  gap: 2px;
 }
 
+/* Imagens do segundo carrossel */
 .carrosselLuiza img {
-    height: 300px;
-    object-fit: cover;
+  width: 100vw;
+  height: 300px;
+  object-fit: cover;
 }
 
+/* Controles do segundo carrossel */
 .controlesLuiza {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
+/* Botões do segundo carrossel */
 .btnLuiza {
-    background-color: #E952DE;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+  background: #555;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
+/* Efeito hover nos botões */
 .btnLuiza:hover {
-    background-color: #E233B4;
+  background: #777;
 }
-/* --- FIM DOS ESTILOS DO CARROSSEL LUIZA --- */
 
+/* Estado ativo do carrossel (quando arrastando) */
+.carrosselLuiza.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  user-select: none;
+}
+
+/* Seção do Spotify */
 #spotify {
+  background-color: #1a1a1a; /* Alterado para consistência */
   padding: 30px;
   border: 1px solid #00d95e42;
   border-radius: 10px;
 }
 
+/* Texto de destaque na seção Spotify */
 #frase-spotify {
   background-color: #00D95F;
   color: black;
-  padding: 10px 0 10px 30px;
+  margin-left: 0;
+  padding: 10px 20px; /* Ajustado padding */
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 
+/* Estilo dos títulos */
 .h3 {
   margin: 30px;
-  text-align: center;
+  text-align: center; /* Centralizado */
 }
 
+/* Ícone do Spotify */
 #ico-spotify {
   width: 100px;
-  vertical-align: middle;
+  vertical-align: middle; /* Alinhamento vertical */
 }
 
+/* Players de áudio do Spotify */
 .audio {
-  margin: 2px;
+  margin: 10px auto; /* Centralizado e com margem */
+  display: block; /* Para o margin auto funcionar */
+  width: 100%; /* Ocupa a largura disponível */
+}
+
+/* Efeitos de transição para os players */
+.audio {
   opacity: 0;
   transform: translateX(-50px);
   transition: all 1.5s ease;
@@ -322,132 +417,181 @@ body {
   transform: translateX(0);
 }
 
+/* Seção da animação do sistema solar */
 .espaco {
   position: relative;
   width: 100vw;
   height: 400px;
   background-color: black;
+  overflow: hidden; /* Evita barras de rolagem */
 }
 
-.sol, .orbita-terra, .terra, .orbita-lua, .lua {
-    position: absolute;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-}
-
+/* Estilo do sol na animação */
 .sol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100px;
   height: 100px;
   background: radial-gradient(circle, #FFD700, #fff700);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 30px #FFD700;
 }
 
+/* Órbita da terra */
 .orbita-terra {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 300px;
   height: 300px;
   border: 1px dashed #aaaaaa6c;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   animation: orbita-terra 10s linear infinite;
 }
 
+/* Planeta terra */
 .terra {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 30px;
   height: 30px;
   background: radial-gradient(circle, #2051f2, #1c60e9);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 10px #00f;
-  top: 50%;
-  left: 0;
 }
 
+/* Órbita da lua */
 .orbita-lua {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   animation: orbita-lua 2s linear infinite;
 }
 
+/* Lua */
 .lua {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 8px;
   height: 8px;
   background: #eee;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 5px #fff;
-  top: 50%;
-  left: 0;
 }
 
+/* Animação da órbita da terra */
 @keyframes orbita-terra {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
+/* Animação da órbita da lua */
 @keyframes orbita-lua {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
+/* Seção do temporizador */
 #temporizador {
-  padding-bottom: 100px;
   background-color: black;
+  padding-bottom: 100px;
 }
 
-#temporizador h1 {
+/* Estilo do título do temporizador */
+h1 {
   font-size: 1.3rem;
   margin-bottom: 30px;
   text-align: center;
   color: white;
 }
 
+/* Container do contador */
 .contador {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+  gap: 10px; /* Espaçamento entre os itens */
   font-size: 1.4rem;
   text-align: center;
-  gap: 10px;
+  border-radius: 50px;
 }
 
+/* Estilo dos elementos de tempo (dias, horas, etc) */
 #temporizador .tempo {
   color: #bb86fc;
-  padding: 15px 5px;
-  font-size: 2.5rem;
+  padding: 15px;
+  font-size: 2rem; /* Tamanho ajustado para mobile */
   font-weight: bold;
 }
 
+/* Estilo dos rótulos (dias, horas, etc) */
 .tempo span {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Tamanho ajustado para mobile */
   margin-top: 5px;
   color: #8b949e;
 }
 
 /* ==========================================================================
-   ESTILOS PARA DESKTOP (TELAS MAIORES QUE 500PX)
+   Estilos para Desktop (Telas maiores que 500px)
    ========================================================================== */
 
 @media screen and (min-width: 500px) {
+    /* ==========================================================================
+       HEADER
+       ========================================================================== */
+
+    header {
+        /* Estilos gerais do cabeçalho */
+    }
+
     #ano {
         margin-left: 20px;
+        font-weight: bolder;
         padding-top: 10px;
     }
 
     #container {
+        display: flex;
         padding: 15px;
+        background: #fff;
+        border-bottom: 1px solid #fce4ec;
         width: 60%;
         margin: 0 auto;
     }
 
     .itens {
+        flex: auto;
+        text-align: center;
+        font-weight: bold;
         padding: 12px;
         font-size: 1.1em;
     }
 
-    .confete {
-        width: 15px;
-        height: 15px;
-        animation-name: cair-desktop;
-    }
+    /* #data está no CSS geral */
 
-    @keyframes cair-desktop {
-        0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
-    }
+    /* #none, #none2 estão no CSS geral */
+
+    /* #confetes-container e animação estão no CSS geral */
 
     #titulo-principal {
         font-size: 3.5em;
@@ -455,14 +599,22 @@ body {
         max-width: 800px;
     }
 
+    #imagem-bolo {
+        margin-bottom: 30px;
+    }
+
     #bolo_grande {
         width: 350px;
     }
 
     #parabens {
-        padding: 30px;
         max-width: 700px;
         margin: 40px auto;
+        padding: 30px;
+    }
+
+    #frase-parabens {
+        font-size: 1.1em;
     }
 
     #parabens p {
@@ -470,10 +622,16 @@ body {
         line-height: 1.6;
     }
 
+    /* ==========================================================================
+       MAIN
+       ========================================================================== */
+
     main#principal {
-        padding: 50px 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
+    /* --- Seção Instagram --- */
     #insta {
         padding: 20px;
         margin: 50px auto;
@@ -484,11 +642,17 @@ body {
 
     #perfil-container {
         gap: 15px;
+        margin-top: 20px;
         margin-left: 30px;
     }
 
     #perfil {
         width: 60px;
+    }
+
+    #verificado {
+        width: 20px;
+        margin-left: 5px;
     }
 
     .carrossel {
@@ -498,16 +662,26 @@ body {
     }
 
     .slides {
-        height: 550px;
+        width: 100%; /* Mantém a largura total do container */
+        height: 550px; /* Altura fixa para desktop */
     }
 
     .dots {
         margin-bottom: 10px;
     }
 
+    .dot {
+        height: 9px;
+        width: 9px;
+        margin: 0 6px;
+    }
+
+    /* .active está no CSS geral */
+
     #curtida {
         gap: 10px;
-        margin: 15px 0 0 30px;
+        margin-top: 15px;
+        margin-left: 30px;
     }
 
     #likeIcon {
@@ -520,8 +694,9 @@ body {
     }
 
     #comentario {
-        background-color: #1a1a1a;
-        margin: 25px 30px 0 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 25px;
         padding: 15px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
@@ -548,8 +723,9 @@ body {
         bottom: 15px;
         gap: 8px;
     }
-    
+
     .contador {
+        color: #777;
         font-size: 1rem !important;
     }
 
@@ -558,13 +734,14 @@ body {
         border-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* ESTILOS DESKTOP PARA O CARROSSEL LUIZA */
+    /* --- Carrossel de Fotos Juntos --- */
     #carrosel-juntos {
-      margin-top: 120px;
-      margin-bottom: 80px;
+        margin-top: 120px;
+        margin-bottom: 80px;
     }
 
     #p-carrosel-juntos {
+        padding: 20px;
         font-size: 1.4em;
         line-height: 1.8;
         max-width: 800px;
@@ -572,27 +749,28 @@ body {
     }
 
     .carrosselLuiza-container {
+        width: 90vw;
         max-width: 1000px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     }
-    
+
     .carrosselLuiza img {
+        width: 33.333%; /* Para mostrar 3 imagens por vez */
         height: 400px;
     }
-    
+
     .controlesLuiza {
-      margin-top: 30px;
-      gap: 20px;
+        gap: 20px;
+        margin-top: 20px;
     }
 
     .btnLuiza {
         padding: 12px 25px;
         font-size: 1.1em;
     }
-    /* FIM DOS ESTILOS DESKTOP PARA O CARROSSEL LUIZA */
 
+    /* --- Seção Spotify --- */
     #spotify {
-        background-color: #1a1a1a;
         padding: 40px;
         max-width: 800px;
         margin: 80px auto;
@@ -601,7 +779,6 @@ body {
     #frase-spotify {
         padding: 15px 40px 15px 30px;
         font-size: 1.3em;
-        text-shadow: none;
     }
 
     .h3 {
@@ -615,12 +792,18 @@ body {
     }
 
     .audio {
-        width: 90%;
-        max-width: 600px;
         height: 180px;
-        margin: 10px auto;
     }
 
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+
+    footer {
+        padding-top: 50px;
+    }
+
+    /* --- Animação do Sistema Solar --- */
     .espaco {
         height: 500px;
     }
@@ -634,7 +817,6 @@ body {
     .orbita-terra {
         width: 400px;
         height: 400px;
-        animation-duration: 15s;
     }
 
     .terra {
@@ -646,7 +828,6 @@ body {
     .orbita-lua {
         width: 80px;
         height: 80px;
-        animation-duration: 3s;
     }
 
     .lua {
@@ -655,9 +836,10 @@ body {
         box-shadow: 0 0 8px #fff;
     }
 
+    /* --- Contagem Regressiva --- */
     #temporizador {
-        padding-top: 50px;
         padding-bottom: 120px;
+        padding-top: 50px;
     }
 
     #temporizador h1 {
@@ -675,10 +857,7 @@ body {
     }
 
     .tempo {
-        color: white;
         padding: 25px;
-        background-color: #333;
-        border-radius: 15px;
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         min-width: 120px;
     }
@@ -686,6 +865,22 @@ body {
     .tempo span {
         font-size: 1.5rem;
         margin-top: 10px;
-        color: #b0b8c0;
+    }
+}
+
+/* ==========================================================================
+   Correções para a Seção Spotify em Celulares
+   ========================================================================== */
+@media screen and (max-width: 500px) {
+    /* Centraliza o texto dentro da faixa verde */
+    #frase-spotify {
+        text-align: center;
+        padding-left: 15px; /* Reduz o padding para telas menores */
+        padding-right: 15px; /* Adiciona padding para centralizar melhor */
+    }
+
+    /* Centraliza o título "Previas do Spotify" e o ícone */
+    #spotify .h3 {
+        text-align: center;
     }
 }
